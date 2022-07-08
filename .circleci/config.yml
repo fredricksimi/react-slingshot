@@ -6,19 +6,19 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       checkout
-      - run: npm run lint
+      - run: "npm run lint"
   test:
     docker:
       - image: circleci/node:13.8.0
     steps:
       checkout
-      - run: npm run test
+      - run: "npm run test"
   analyze:
     docker:
       - image: circleci/node:13.8.0
     steps:
       checkout
-      - run: npm audit
+      - run: "npm audit"
 
 workflows:
   my_workflow:
